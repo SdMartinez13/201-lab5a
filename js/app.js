@@ -89,7 +89,7 @@ function sumArray(sumArr) { //eslint-disable-line
   let totalSum = 0;
 
   for (let i = 0; i < sumArr.length; i++) {
-    totalSum += sum(totalSum, sumArr[i])[0];
+    totalSum = sum(totalSum, sumArr[i])[0];
   }
 
   let myStr = `${sumArr} was passed in as an array of numbers, and 9 is their sum.`;
