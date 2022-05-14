@@ -88,19 +88,11 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(sumArr) { //eslint-disable-line
   let totalSum = 0;
 
-
-  // sum(2, 3)
-
-
   for (let i = 0; i < sumArr.length; i++) {
-    console.log(sumArr[i], totalSum, 'index at ' + i);
-
-    [totalSum] = sum(totalSum, sumArr[i]);
+    totalSum += sum(totalSum, sumArr[i])[0];
   }
 
   let myStr = `${sumArr} was passed in as an array of numbers, and 9 is their sum.`;
-
-  console.log(totalSum, 'totalSum');
   return [totalSum, myStr];
 }
 
